@@ -19,7 +19,7 @@ import ElementDTO from './model/ElementDTO';
 import MeteringRequestDTO from './model/MeteringRequestDTO';
 import Unit from './model/Unit';
 import EventsApi from './api/EventsApi';
-import MetringApi from './api/MetringApi';
+import MeteringApi from './api/MeteringApi';
 
 /**
 * Revenium_Metering_API.<br>
@@ -90,8 +90,8 @@ export {
     EventsApi,
 
     /**
-    * The MetringApi service constructor.
-    * @property {module:api/MetringApi}
+    * The MeteringApi service constructor.
+    * @property {module:api/MeteringApi}
     */
-    MetringApi
+    MeteringApi
 };

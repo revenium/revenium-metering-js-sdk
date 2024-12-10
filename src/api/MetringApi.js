@@ -18,15 +18,15 @@ import MeteringRequestDTO from '../model/MeteringRequestDTO';
 import Unit from '../model/Unit';
 
 /**
-* Metring service.
-* @module api/MetringApi
+* Metering service.
+* @module api/MeteringApi
 * @version 1.14.0-SNAPSHOT
 */
-export default class MetringApi {
+export default class MeteringApi{
 
     /**
-    * Constructs a new MetringApi. 
-    * @alias module:api/MetringApi
+    * Constructs a new MeteringApi. 
+    * @alias module:api/MeteringApi
     * @class
     * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
     * default to {@link module:ApiClient#instanc
@@ -38,7 +38,7 @@ export default class MetringApi {
 
     /**
      * Callback function to receive the result of the meter operation.
-     * @callback moduleapi/MetringApi~meterCallback
+     * @callback moduleapi/MeteringApi~meterCallback
      * @param {String} error Error message, if any.
      * @param {module:model/Unit{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -48,7 +48,7 @@ export default class MetringApi {
      * Insert API metering data
      * Insert API metering data
      * @param {module:model/MeteringRequestDTO} body 
-     * @param {module:api/MetringApi~meterCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/MeteringApi~meterCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
     meter(body, callback) {
@@ -85,7 +85,7 @@ export default class MetringApi {
     }
     /**
      * Callback function to receive the result of the valid operation.
-     * @callback moduleapi/MetringApi~validCallback
+     * @callback moduleapi/MeteringApi~validCallback
      * @param {String} error Error message, if any.
      * @param {Object{ data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -97,7 +97,7 @@ export default class MetringApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.productKey The product key
      * @param {String} opts.application The application ID
-     * @param {module:api/MetringApi~validCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/MeteringApi~validCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
     valid(opts, callback) {

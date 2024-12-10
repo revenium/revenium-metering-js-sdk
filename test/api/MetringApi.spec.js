@@ -30,11 +30,11 @@
   var instance;
 
   beforeEach(function() {
-    instance = new ReveniumMeteringApi.MetringApi();
+    instance = new ReveniumMeteringApi.MeteringApi();
   });
 
   describe('(package)', function() {
-    describe('MetringApi', function() {
+    describe('MeteringApi', function() {
       describe('meter', function() {
         it('should call meter successfully', function(done) {
           // TODO: uncomment, update parameter values for meter call and complete the assertions

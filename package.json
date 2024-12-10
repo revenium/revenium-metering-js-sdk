@@ -1,6 +1,6 @@
 {
   "name": "revenium_metering_api",
-  "version": "1.14.0-SNAPSHOT",
+  "version": "1.17.0-SNAPSHOT",
   "description": "Revenium_Metering_API",
   "license": "Unlicense",
   "main": "src/index.js",

@@ -13,8 +13,8 @@
  * Do not edit the class manually.
  *
  */
-import ApiClient from "../ApiClient";
-import ApiEventDTO from '../model/ApiEventDTO';
+import ApiClient from "../ApiClient.js";
+import ApiEventDTO from '../model/ApiEventDTO.js';
 
 /**
 * Events service.

@@ -13,8 +13,8 @@
  * Do not edit the class manually.
  *
  */
-import ApiClient from '../ApiClient';
-import ElementDTO from './ElementDTO';
+import ApiClient from '../ApiClient.js';
+import ElementDTO from './ElementDTO.js';
 
 /**
  * The MeteringRequestDTO model module.

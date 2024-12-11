@@ -1,10 +1,17 @@
 {
   "name": "revenium_metering_api",
-  "version": "1.17.0-SNAPSHOT",
+  "version": "1.17.3-SNAPSHOT",
   "description": "Revenium_Metering_API",
   "license": "Unlicense",
-  "main": "src/index.js",
+  "type": "module",
+  "files": ["dist", "src"],
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
   "scripts": {
+    "build": "babel src -d dist",
+    "prepare": "npm run build",
     "test": "mocha --require @babel/register --recursive"
   },
   "browser": {

@@ -13,13 +13,13 @@
  * Do not edit the class manually.
  *
  */
-import ApiClient from './ApiClient';
-import ApiEventDTO from './model/ApiEventDTO';
-import ElementDTO from './model/ElementDTO';
-import MeteringRequestDTO from './model/MeteringRequestDTO';
-import Unit from './model/Unit';
-import EventsApi from './api/EventsApi';
-import MeteringApi from './api/MeteringApi';
+import ApiClient from './ApiClient.js';
+import ApiEventDTO from './model/ApiEventDTO.js';
+import ElementDTO from './model/ElementDTO.js';
+import MeteringRequestDTO from './model/MeteringRequestDTO.js';
+import Unit from './model/Unit.js';
+import EventsApi from './api/EventsApi.js';
+import MeteringApi from './api/MeteringApi.js';
 
 /**
 * Revenium_Metering_API.<br>

@@ -1,63 +1,11 @@
-# node configuration for Revenium Metering API
+# Revenium Metering JavaScript SDK
 
-ReveniumMeteringApi - JavaScript client for the revenium metering api
-
-- API version: 1.14.0-SNAPSHOT
-- Package version: 1.14.0-SNAPSHOT
+This is a JavaScript SDK for the Revenium Metering API. It is generated from the OpenAPI specification. The SDK is intended to be used in a Node.js environment.
 
 ## Installation
 
-### For [Node.js](https://nodejs.org/)
-
-#### npm
-
-To publish the library as a [npm](https://www.npmjs.com/),
-please follow the procedure in ["Publishing npm packages"](https://docs.npmjs.com/getting-started/publishing-npm-packages).
-
-Then install it via:
-
 ```shell
-npm install revenium_metering_api --save
-```
-
-#### git
-#
-If the library is hosted at a git repository, e.g.
-https://github.com/GIT_USER_ID/GIT_REPO_ID
-then install it via:
-
-```shell
-    npm install GIT_USER_ID/GIT_REPO_ID --save
-```
-
-### For browser
-
-The library also works in the browser environment via npm and [browserify](http://browserify.org/). After following
-the above steps with Node.js and installing browserify with `npm install -g browserify`,
-perform the following (assuming *main.js* is your entry file):
-
-```shell
-browserify main.js > bundle.js
-```
-
-Then include *bundle.js* in the HTML pages.
-
-### Webpack Configuration
-
-Using Webpack you may encounter the following error: "Module not found: Error:
-Cannot resolve module", most certainly you should disable AMD loader. Add/merge
-the following section to your webpack config:
-
-```javascript
-module: {
-  rules: [
-    {
-      parser: {
-        amd: false
-      }
-    }
-  ]
-}
+    npm install https://github.com/revenium/revenium-metering-js-sdk --save
 ```
 
 ## Getting Started
@@ -65,19 +13,34 @@ module: {
 Please follow the [installation](#installation) instruction and execute the following JS code:
 
 ```javascript
-var ReveniumMeteringApi = require('revenium_metering_api');
+import('revenium_metering_api').then(revenium => {
+    const metering = new revenium.MeteringApi()
+    const apikey = process.env.API_KEY;
 
-var api = new ReveniumMeteringApi.EventsApi()
-var body = new ReveniumMeteringApi.ApiEventDTO(); // {ApiEventDTO} 
+    metering.apiClient.defaultHeaders["x-api-key"] = process.env.API_KEY;
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-api.saveEvent(body, callback);
+    const payload = {
+        method: 'POST',
+        url: '/hello',
+        application: 'my-awesome-app',
+        responseCode: 200,
+        requestHeaders: ['content-type'],
+        responseHeaders: ['content-type'],
+        elements: [
+            { name: 'hello', value: 'world' }
+        ]
+    };
+
+    metering.meter(payload, (error, data, response) => {
+        if (error) {
+            console.error("Error submitting metering request: " + error);
+        } else {
+            console.log('Metering request successfully submitted');
+        }
+    });
+
+});
+
 ```
 
 ## Documentation for API Endpoints

@@ -13,9 +13,9 @@
  * Do not edit the class manually.
  *
  */
-import ApiClient from "../ApiClient";
-import MeteringRequestDTO from '../model/MeteringRequestDTO';
-import Unit from '../model/Unit';
+import ApiClient from "../ApiClient.js";
+import MeteringRequestDTO from '../model/MeteringRequestDTO.js';
+import Unit from '../model/Unit.js';
 
 /**
 * Metering service.

@@ -15,8 +15,7 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```javascript
 import('revenium_metering_api').then(revenium => {
     const metering = new revenium.MeteringApi()
-    const apikey = process.env.API_KEY;
-
+    
     metering.apiClient.defaultHeaders["x-api-key"] = process.env.API_KEY;
 
     const payload = {

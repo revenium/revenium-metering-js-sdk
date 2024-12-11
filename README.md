@@ -5,7 +5,7 @@ This is a JavaScript SDK for the Revenium Metering API. It is generated from the
 ## Installation
 
 ```shell
-    npm install https://github.com/revenium/revenium-metering-js-sdk --save
+    npm install revenium_metering_api  --save
 ```
 
 ## Getting Started
